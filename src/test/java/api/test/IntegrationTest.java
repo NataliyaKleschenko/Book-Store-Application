@@ -5,7 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ui.step.HomePageStep;
 import ui.test.BaseTest;
-
 import java.util.List;
 public class IntegrationTest extends BaseTest {
     @Test
@@ -13,8 +12,9 @@ public class IntegrationTest extends BaseTest {
     public void compareListsOfTitles() {
         HomePageStep homePageStep = new HomePageStep();
         GetBooksStep getBooksStep = new GetBooksStep();
-        List<String> listOfTitleUI = homePageStep.geListOfTitleUI();
+        List<String> listOfTitleUI = homePageStep.getListOfTitleUI();
         List<String> listOfTitleAPI = getBooksStep.getListOfTitlesAPI();
+
         Assert.assertEquals(listOfTitleUI,listOfTitleAPI);
     }
 }

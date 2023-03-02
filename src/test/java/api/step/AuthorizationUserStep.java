@@ -1,6 +1,7 @@
 package api.step;
 import api.model.user.UserRequest;
 import static api.spec.AuthorizationSpecification.authorizationRequestSpec;
+import static api.spec.AuthorizationSpecification.authorizationResponseSpec;
 import static io.restassured.RestAssured.given;
 public class AuthorizationUserStep {
     public static void authorizeUser(String name, String password) {
@@ -15,6 +16,6 @@ public class AuthorizationUserStep {
                 .when()
                 .post()
                 .then()
-                .statusCode(200);
+                .spec(authorizationResponseSpec);
     }
 }

@@ -1,5 +1,6 @@
 package api.spec;
 
+import api.util.Token;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
@@ -19,7 +20,6 @@ public class UserSpecification {
             .log(LogDetail.STATUS)
             .log(LogDetail.BODY)
             .build();
-
     public static ResponseSpecification userErrorResponseSpec400 = new ResponseSpecBuilder()
             .expectStatusCode(400)
             .log(LogDetail.STATUS)
@@ -29,6 +29,5 @@ public class UserSpecification {
             .expectStatusCode(406)
             .log(LogDetail.STATUS)
             .log(LogDetail.BODY)
-
             .build();
 }

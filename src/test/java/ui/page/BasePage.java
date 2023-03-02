@@ -13,25 +13,31 @@ import ui.driver.WebDriverSingleton;
 import java.time.Duration;
 
 public abstract class BasePage {
+    public static final String BASE_URL = "https://demoqa.com/books";
     protected static Logger logger = LogManager.getLogger();
     protected WebDriver driver;
 
     protected BasePage() {
         this.driver = WebDriverSingleton.getDriver();
     }
+
     protected WebElement waitForElement(WebElement element) {
         new WebDriverWait(driver, Duration.ofSeconds(4)).until(ExpectedConditions.visibilityOf(element));
         return element;
     }
+
     protected void clickOnElement(By locator) {
         driver.findElement(locator).click();
     }
+
     protected String getTextFromElement(By locator) {
-       return driver.findElement(locator).getText();
+        return driver.findElement(locator).getText();
     }
+
     protected void fillForm(By locator, String text) {
         driver.findElement(locator).sendKeys(text);
     }
+
     protected BasePage scrollPageDown(By locator) {
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         WebElement webElement = driver.findElement(locator);

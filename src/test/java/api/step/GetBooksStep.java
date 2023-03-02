@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 import static api.spec.BooksSpecifications.bookRequestSpec;
 import static api.spec.BooksSpecifications.bookResponseSpec;
 import static io.restassured.RestAssured.given;
-
 public class GetBooksStep {
     public List<String> getListOfTitlesAPI() {
         List<BookResponse> books = given()

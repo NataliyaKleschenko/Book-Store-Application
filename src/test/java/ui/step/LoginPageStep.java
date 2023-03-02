@@ -8,5 +8,6 @@ public class LoginPageStep extends LoginPage {
         typeUserName(user.getUserName())
                 .typeUserPassword(user.getPassword())
                 .clickOnButtonLogin();
+        logger.info("Trying to login...");
     }
 }

@@ -2,7 +2,6 @@ package ui.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import ui.util.Constants;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,7 +11,8 @@ public class HomePage extends BasePage {
     private final By booksContainer = By.xpath("//span[@class='mr-2']");
 
     public HomePage openPage() {
-        driver.navigate().to(Constants.BASE_URL);
+        driver.navigate().to(BASE_URL);
+        logger.info("Page Opened " + driver.getCurrentUrl());
         return this;
     }
 
