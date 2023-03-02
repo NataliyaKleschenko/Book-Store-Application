@@ -3,7 +3,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import ui.entity.User;
 public class UserCreator {
     public static final String USER_NAME = RandomStringUtils.randomAlphanumeric(7);
-    public static final String PASSWORD = RandomStringUtils.randomAlphanumeric(7) + "*/";
+    public static final String PASSWORD = RandomStringUtils.randomAlphanumeric(7) + "a*/";
     public static User createCorrectUser() {
         return new User(USER_NAME,PASSWORD);
     }
