@@ -1,1 +1,1 @@
-# gradle clean test
+# run with gradle clean test

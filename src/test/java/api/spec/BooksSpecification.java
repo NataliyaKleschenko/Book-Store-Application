@@ -5,7 +5,7 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import static io.restassured.RestAssured.with;
-public class BooksSpecifications {
+public class BooksSpecification {
     public static RequestSpecification bookRequestSpec = with()
             .baseUri("https://demoqa.com/BookStore/v1")
             .basePath("/Books")
